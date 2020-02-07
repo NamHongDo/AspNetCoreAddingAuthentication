@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WishList.Models.AccountViewModels
 {
-    public class LoginViewModels
+    public class LoginViewModel
     {
         [Required]
         [EmailAddress]
@@ -14,7 +14,7 @@ namespace WishList.Models.AccountViewModels
 
         [Required]
         [DataType(DataType.Password)]
-        public string Password { get;set }
+        public string Password { get; set; }
 
     }
 }

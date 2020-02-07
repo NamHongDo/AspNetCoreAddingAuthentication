@@ -56,7 +56,7 @@ namespace WishList.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public IActionResult Login(LoginViewModels model)
+        public IActionResult Login(LoginViewModel model)
         {
             if (!ModelState.IsValid)
                 return View(model);
@@ -70,7 +70,7 @@ namespace WishList.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryTokenAttribute]
+        [ValidateAntiForgeryToken]
         public IActionResult Logout() {
             _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
